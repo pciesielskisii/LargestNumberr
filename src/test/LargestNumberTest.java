@@ -25,6 +25,14 @@ public class LargestNumberTest {
     }
 
     @Test
+    public void checkIfLargestNumberWorksCorrectlyWithOtherParams(){
+        List<Integer> list = Arrays.asList(100, 99 , 9);
+
+        LargestNumber.largestNumber(list);
+        assertEquals("999100", outputStreamCaptor.toString().trim());
+    }
+
+    @Test
     public void checkIfLargestNumberWorksCorrectly(){
         List<Integer> list = Arrays.asList(1, 2 , 3);
 
@@ -47,4 +55,5 @@ public class LargestNumberTest {
         LargestNumber.largestNumber(list);
         assertEquals("List is empty", outputStreamCaptor.toString().trim());
     }
+
 }
