@@ -4,7 +4,7 @@ public class LargestNumber {
 
     public static void largestNumber(List<Integer> integerList) {
         if (!checkNegativeNumbers(integerList)) {
-            List<String> result = integerList
+            List<String> inputIntegerListAsString = integerList
                     .stream()
                     .map(Object::toString).sorted((o1, o2) -> {
                         String o1o2 = o1 + o2;
@@ -13,7 +13,7 @@ public class LargestNumber {
 
                         return o1o2.compareTo(o2o1) > 0 ? -1 : 1;
                     }).toList();
-            for (String s : result) System.out.print(s);
+            for (String s : inputIntegerListAsString) System.out.print(s);
         } else {
             System.out.print("There are negative numbers");
         }
