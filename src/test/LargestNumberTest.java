@@ -31,4 +31,12 @@ public class LargestNumberTest {
         LargestNumber.largestNumber(list);
         assertEquals("321", outputStreamCaptor.toString().trim());
     }
+
+    @Test
+    public void checkIfThereAreNegativesInList(){
+        List<Integer> list = Arrays.asList(-1, 2 , 3);
+
+        LargestNumber.largestNumber(list);
+        assertEquals("There are negative numbers", outputStreamCaptor.toString().trim());
+    }
 }
