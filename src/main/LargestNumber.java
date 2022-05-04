@@ -17,7 +17,7 @@ public class LargestNumber {
                 for (String s : inputIntegerListAsString) System.out.print(s);
             }
         } catch (NullPointerException e){
-            e.getMessage();
+            System.out.print("List is null");
         }
     }
 
@@ -32,10 +32,6 @@ public class LargestNumber {
 
     private static Boolean largestNumberValidation(List<Integer> integerList) {
         boolean validated = true;
-        if (integerList == null) {
-            validated = false;
-            System.out.println("List is null");
-        }
         if (checkNegativeNumbers(integerList)) {
             validated = false;
             System.out.print("There are negative numbers");
