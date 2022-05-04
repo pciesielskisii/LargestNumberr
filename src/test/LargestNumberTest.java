@@ -56,4 +56,9 @@ public class LargestNumberTest {
         assertEquals("List is empty", outputStreamCaptor.toString().trim());
     }
 
+    @Test
+    public void checkIfListIsNull() {
+        LargestNumber.largestNumber(null);
+        assertEquals("List is null", outputStreamCaptor.toString().trim());
+    }
 }
