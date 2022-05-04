@@ -2,6 +2,11 @@ import java.util.List;
 
 public class LargestNumber {
 
+    /**
+     * This function is mapping list of integers to list of strings. Compares them and prints the
+     * arrangement with the largest value.
+     * @param integerList
+     */
     public static void largestNumber(List<Integer> integerList) {
         try {
             if (largestNumberValidation(integerList)) {
